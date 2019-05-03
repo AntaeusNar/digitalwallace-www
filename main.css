@@ -65,6 +65,11 @@ body {
     height: auto;
 }
 
+.p-resp {
+    max-width: 600px;
+    height: auto;
+}
+
 @media all and (max-width:800px) {
     .top-nav {
         justify-content: space-around;
