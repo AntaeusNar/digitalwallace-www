@@ -3,6 +3,7 @@
     flex-flow: row wrap;
     justify-content: space-around;
 }
+
 .wrapper > * {
     margin-top: 10px;
     margin-left: 5px;
@@ -17,6 +18,8 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-end;
+    
+    position: relative;
 }
 
 .top-nav a {
@@ -27,7 +30,24 @@
 }
 
 .top-nav a:hover {
-  background: darken(deepskyblue, 5%);
+  background-color:rgba(0, 0, 0, 0.2);
+}
+
+.top-nav ul {
+    display: block;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.top-nav ul ul {
+    display: none;
+    position: absolute;
+    background: deepskyblue;
+}
+
+.top-nav ul:hover ul {
+    display: block;
 }
 
 .img-resp {
