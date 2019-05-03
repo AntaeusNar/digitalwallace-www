@@ -1,90 +1,9 @@
 body {
-    background: #212121
+    padding-top: 60px;
+    background: #212121;
+    color: antiquewhite
 }
 
-.wrapper {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-}
-
-.wrapper > * {
-    margin-top: 10px;
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-.top-nav {
-    list-style: none;
-    margin: 0;
-    
-    background: #0245be;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-end;
-    
-    position: relative;
-}
-
-.top-nav a {
-    text-decoration: none;
-    display: block;
-    padding: 1em;
-    color:white;
-}
-
-.top-nav a:hover {
-  background-color:rgba(0, 0, 0, 0.2);
-}
-
-.top-nav ul {
-    display: block;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    position: relative;
-}
-
-.top-nav ul ul {
-    display: none;
-    position: absolute;
-    background: #0245be;
-    flex-flow:column
-}
-
-.top-nav ul:hover ul {
-    display: flex;
-}
-
-.top-nav ul ul li {
-    position: relative
-}
-
-.img-resp {
-    max-width: 100%;
-    height: auto;
-}
-
-.p-resp {
-    max-width: 600px;
-    height: auto;
-}
-
-@media all and (max-width:800px) {
-    .top-nav {
-        justify-content: space-around;
-    }
-}
-
-@media all and (max-width:500px) {
-    .top-nav {
-        flex-flow: column wrap;
-        padding: 0;
-    }
-    
-    .top-nav a {
-        text-align: center;
-        padding: 10px;
-        
-    }
+p {
+    text-indent: 30px;
 }
