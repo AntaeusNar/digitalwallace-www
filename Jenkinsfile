@@ -1,7 +1,8 @@
 pipeline {
   agent {
-    dockerfile {
-      filename '.jenkins/JenkinsDockerFile'
+    docker {
+      image 'nginx:alpine'
+      args '-p 3000:80'
     }
 
   }
@@ -11,8 +12,5 @@ pipeline {
         input 'Check url, Press procced to finish'
       }
     }
-  }
-  environment {
-    args = '-p 3000:80'
   }
 }
