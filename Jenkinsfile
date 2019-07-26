@@ -13,5 +13,10 @@ pipeline {
         input 'Check url, Press procced to finish'
       }
     }
+    stage('Alldone') {
+      steps {
+        echo 'All done!'
+      }
+    }
   }
 }
