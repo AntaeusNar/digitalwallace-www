@@ -2,7 +2,7 @@ pipeline {
   agent {
     docker {
       image 'nginx:alpine'
-      args '-p 80:3000'
+      args '-p 80:80'
     }
 
   }
@@ -11,11 +11,6 @@ pipeline {
       steps {
         echo 'Trying to see if this works'
         input 'Check url, Press procced to finish'
-      }
-    }
-    stage('Alldone') {
-      steps {
-        echo 'All done!'
       }
     }
   }
