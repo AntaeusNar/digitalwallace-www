@@ -3,7 +3,6 @@ pipeline {
     docker {
       image 'nginx:alpine'
       args '-p 80:80'
-      commands: "-g 'daemon off;'"
     }
 
   }
