@@ -2,7 +2,7 @@ pipeline {
   agent {
     docker {
       image 'nginx:alpine'
-      args '-p 80:80'
+      args '-p 80:3000'
     }
 
   }
