@@ -1,0 +1,4 @@
+#Tests
+
+FROM nginx:alpine
+EXPOSE 3000:80 nginx
