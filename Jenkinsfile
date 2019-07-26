@@ -12,4 +12,7 @@ pipeline {
       }
     }
   }
+  environment {
+    args = '-p 3000:80'
+  }
 }
