@@ -1,11 +1,5 @@
 pipeline {
-  agent {
-    docker {
-      image 'nginx:alpine'
-      args '-p 80:80'
-    }
-
-  }
+  agent any
   stages {
     stage('Deploy') {
       steps {
