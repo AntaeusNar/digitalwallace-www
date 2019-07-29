@@ -78,7 +78,8 @@
             </div>
             <div class="row mt-3">
                 <div class="col">
-                    <p>As of right now, this is very much so a work in progress.</p>
+                    <h3>Deployment Process</h3>
+                    <p>The site automaticaly updates when changes are made to the master branch of the git repo on Github.  When a change is commited to the master branch, Github sends a webhook that hits a NGINX proxy on digitalwallace.dev, and then is fired off to my local firewall.  After passing through the firewall it hits my interal proxy, and is sent to a LXC on Proxmox that is running a Jenkins instance.  Jenkins pulls the git repo and then runs the jenkinsfile for automation.  This normally would test the code, but there are not many tests for static pages that I know of.  Jenkins will then ssh into the AWS EC2 instance running this site, and do a git fetch and git checkout force.  The www folder of this repo is symlinked to the webroot of the NGINX config.  As of right now, this is very much so a work in progress.</p>
                 </div>
             </div>
             <div class="row mt-3">
@@ -90,7 +91,7 @@
                     <ul>
                         <li>Homelab:</li>
                         <ul>
-                            <li>Dell R610, Dell R720, 2x Compaq Presario's running <a href="https://www.proxmox.com/en/">Proxmox</a> as a <a href="https://en.wikipedia.org/wiki/Hypervisor">hypervisor</a> - not clustered (yet)</li>
+                            <li>Dell R610 running <a href="https://www.proxmox.com/en/">Proxmox</a> as a <a href="https://en.wikipedia.org/wiki/Hypervisor">hypervisor</a></li>
                             <li>Raspberry Pi running <a href="https://pi-hole.net/">Pi-hole</a> and LAN DNS/DHCP</li>
                             <li>Several <a href="https://linuxcontainers.org/lxc/introduction/">LXC's</a> running on the hypervisior providing:</li>
                             <ul>
@@ -118,7 +119,7 @@
                         exercitation. Magna consequat in vidisse, de aliqua ad dolor ita incididunt e
                         amet, hic malis admodum arbitrantur, anim concursionibus quamquam quis
                         mandaremus, vidisse enim cernantur quamquam, amet quibusdam quo laborum ita
-                        probant aut sint. Added for deployment testing.</p>
+                        probant aut sint.</p>
                 </div>
                 <div class="col">
                     <img class="img-fluid rounded mx-auto d-block" src="https://picsum.photos/600?grayscale&blur=1&rand=2">
