@@ -7,10 +7,10 @@ pipeline {
 
   }
   stages {
-    stage('Test') {
+    stage('Deploy') {
       steps {
         
-        echo 'Trying to see if this works'
+        /.jenkins/deploy.sh
 
       }
     }
