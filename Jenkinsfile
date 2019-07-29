@@ -9,9 +9,9 @@ pipeline {
   stages {
     stage('Test') {
       steps {
-        sh 'service nginx start'
+        
         echo 'Trying to see if this works'
-        input 'Check url, Press procced to finish'
+
       }
     }
   }
