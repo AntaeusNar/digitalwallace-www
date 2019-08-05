@@ -1,3 +1,5 @@
+[![Build Status](http://jenkins.digitalwallace.dev/buildStatus/icon?job=Github+org+all+run%2Fdigitalwallace-www%2Fmaster)]
+
 # www.digitalwallace.dev
 
 This is the gitrepo for my www site.
