@@ -1,4 +1,4 @@
-![Build Status](http://jenkins.digitalwallace.dev/buildStatus/icon?job=Github+org+all+run%2Fdigitalwallace-www%2Fmaster&style?=plastic)
+![Build Status](https://jenkins.digitalwallace.dev/buildStatus/icon?job=Github+org+all+run%2Fdigitalwallace-www%2Fmaster&style?=plastic)
 
 # www.digitalwallace.dev
 
