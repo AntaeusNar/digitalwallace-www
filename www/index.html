@@ -89,7 +89,7 @@
             <div class="row mt-3">
                 <div class="col">
                     <h3>Deployment Process</h3>
-                    <p>The site automaticaly updates when changes are made to the master branch of the git repo on Github.  When a change is commited to the master branch, Github sends a webhook that hits a NGINX proxy on digitalwallace.dev, and then is fired off to my local firewall.  After passing through the firewall it hits my interal proxy, and is sent to a LXC on Proxmox that is running a Jenkins instance.  Jenkins pulls the git repo and then runs the jenkinsfile for automation.  This normally would test the code, but there are not many tests for static pages that I know of.  Jenkins will then ssh into the AWS EC2 instance running this site, and do a git fetch and git checkout force.  The www folder of this repo is symlinked to the webroot of the NGINX config.  As of right now, this is very much so a work in progress.</p>
+                    <p>The site automaticaly updates when changes are made to the master branch of the git repo on Github.  When a change is commited to the master branch, Github sends a webhook that hits a NGINX proxy on digitalwallace.dev, and then is fired off to my local firewall.  After passing through the firewall it hits my interal proxy, and is sent to a LXC on Proxmox that is running a <a href="https://jenkins.io/">Jenkins</a> instance.  Jenkins pulls the git repo and then runs the jenkinsfile for automation.  This normally would test the code, but there are not many tests for static pages that I know of.  Jenkins will then ssh into the AWS EC2 instance running this site, and do a git fetch and git checkout force.  The www folder of this repo is symlinked to the webroot of the NGINX config.  As of right now, this is very much so a work in progress.</p>
                 </div>
             </div>
             <div class="row mt-3">
@@ -107,16 +107,16 @@
                             <ul>
                                 <li>Media Server</li>
                                 <li>Minecraft Servers</li>
-                                <li>LAN Wiki</li>
+                                <!--<li>LAN Wiki</li>-->
                                 <li>Jenkins Server</li>
-                            </ul>
+                            </ul><!--
                             <li>A few <a href="https://en.wikipedia.org/wiki/Virtual_machine">VM's</a> providing:</li>
                             <ul>
                                 <li><a href="https://www.docker.com/">Docker</a> containers for testing and devolpment</li>
                                 <li><a href="https://www.microsoft.com/en-us/cloud-platform/windows-server">Windows Server</a> learning environment</li>
                                 <li><a href="https://www.ubuntu.com/server">Ubuntu Server</a> learning environment</li>
                                 </ul>
-                            </ul>
+                            </ul>-->
                             <li>Raspberry Pi running <a href="https://pi-hole.net/">Pi-hole</a>, LAN DNS/DHCP, and NGINX Proxy</li>
                         </ul>
 
