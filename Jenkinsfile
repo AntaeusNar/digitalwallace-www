@@ -1,13 +1,33 @@
 pipeline {
-  agent any
+agent any
   stages {
-    stage('Deploy') {
-        when {
+    stage ('Build') {
+		steps {
+			echo 'Building..'
+		}
+		
+	}
+	stage ('Test') {
+		steps {
+			echo 'Testing..'
+		}
+	
+	}
+	stage ('QA') {
+		steps {
+			echo 'QA..'
+		}
+	}
+	stage ('Deploy') {
+		steps {
+			echo 'Deploying..'
+		}
+		when {
             branch 'master'
         }
-      steps {     
-        sh "./.jenkins/deploy.sh"
-      }
+		steps {     
+			sh "./.jenkins/deploy.sh"
+		}
     }
   }
 }
