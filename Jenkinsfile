@@ -19,13 +19,11 @@ agent any
 		}
 	}
 	stage ('Deploy') {
-		steps {
-			echo 'Deploying..'
-		}
 		when {
             branch 'master'
         }
-		steps {     
+		steps {   
+			echo 'Running Deployment...'
 			sh "./.jenkins/deploy.sh"
 		}
     }
